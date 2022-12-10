@@ -1,0 +1,14 @@
+@import 'variables.scss';
+
+.common-section-block {
+    margin: 0rem $layoutGap;
+    min-height: 20rem;
+    border: 1px solid $lightgray;
+    display: flex;
+    flex-direction: column;
+    // position: relative;
+    // top: -2rem;
+}
+.inner-section {
+    padding: 1rem;
+}

@@ -1,0 +1,23 @@
+@import 'variables.scss';
+
+.main-header {
+    // background-color: $primaryBackgroundColor;
+    // color: $secondaryTextColor;
+    border-bottom: 1px solid $lightgray;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.header-logo {
+    font-size: 2rem;
+    color: $midnightblue;
+    font-weight: 600;
+}
+.header-menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.header-menu-item {
+    padding: 0rem 1rem;
+}

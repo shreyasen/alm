@@ -1,0 +1,32 @@
+@import 'variables.scss';
+
+// .common-header-block {
+//     // border-bottom: 1px solid $lightgray;
+//     padding: $fivePadding $layoutGap;
+// }
+.welcome-text {
+    font-size: 3rem;
+}
+.text-heading {
+    font-size: $headingText;
+}
+// .courses-and-books-block {
+//     margin: 0rem $layoutGap;
+//     min-height: 20rem;
+//     border: 1px solid $lightgray;
+//     display: flex;
+//     flex-direction: column;
+// }
+.courses-and-books-inner-header {
+    display: flex;
+    justify-content: space-between;
+}
+.add-course-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.no-course-block {
+    margin: auto;
+}

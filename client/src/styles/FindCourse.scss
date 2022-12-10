@@ -1,0 +1,19 @@
+@import 'variables.scss';
+@import 'Layout.scss';
+@import 'Dashboard.scss';
+
+.find-course-input-block {
+    display: flex;
+    justify-content: space-between;
+}
+.find-course-text {
+    padding: 1rem 0rem;
+}
+.course-id-input-text {
+    @extend .input-text;
+    margin: unset;
+    width: 87%;
+}
+.continue-btn {
+    @extend .add-course-btn;
+}
