@@ -1,33 +1,33 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
-import Cookies from "js-cookie";
+import { useSelector } from "react-redux";
 import Banner from "../../components/Banner";
 import Section from "../../components/Section";
 import "../../styles/Dashboard.scss";
 import { ROUTE_NAMES } from "../../router/RouteNames";
+import { getEnrollments } from "../../apis";
 
 const Dashboard = () => {
   const navigate = useNavigate();
-  const [user, setUser] = useState();
-  useEffect(() => {
-    axios.get("http://localhost:5000/alm/user/details", {
-      headers: {Authorization: `Bearer ${Cookies.get("JWT-TOKEN")}`},
-    })
-    .then(res => setUser(res.data))
-    .catch(err => console.log(err))
-  }, []);
+  const userDetails = useSelector(state => state.user.userDetails);
+  const [list, seList] = useState([]);
 
   const handleAddCourse = () => {
     navigate(ROUTE_NAMES.findcourse);
   }
 
+  useEffect(() => {
+    getEnrollments()
+    .then((res) => {seList(res.data)})
+  }, []);
+
   return (
     <div>
       <Banner>
-        <div className="welcome-text">Welcome, {user?.firstName}!</div>
+        {console.log(list)}
+        <div className="welcome-text">Welcome, {userDetails?.firstName}!</div>
         <div>
-          {/* <div>{user?.email}</div> */}
+          {/* <div>{userDetails?.email}</div> */}
         </div>
       </Banner>
       <Section>
@@ -37,9 +37,16 @@ const Dashboard = () => {
             <button className="add-course-btn" onClick={handleAddCourse}>+ Add Course</button>
           </div>
         </div>
-        <div className="no-course-block">
+        {list.length ? (
+          <div>
+            course
+          </div>
+        ) : (
+          <div className="no-course-block">
             <p>You don't have any course or book right now. Please add new course or book.</p>
           </div>
+        )}
+        
       </Section>
     </div>
   );

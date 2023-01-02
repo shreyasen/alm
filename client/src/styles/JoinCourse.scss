@@ -1,0 +1,22 @@
+@import 'Dashboard.scss';
+
+.course-title {
+    padding: 1rem 0rem;
+}
+
+.course-code {
+    @extend .course-title
+}
+
+.course-instructors {
+    @extend .course-title
+}
+
+.instructors-list {
+    padding-left: 1rem;
+}
+
+.join-course-button {
+    @extend .add-course-btn;
+    margin-top: 1rem;
+}

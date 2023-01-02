@@ -10,8 +10,11 @@
 }
 .header-logo {
     font-size: 2rem;
-    color: $midnightblue;
     font-weight: 600;
+}
+.header-link {
+    text-decoration: none;
+    color: $midnightblue;
 }
 .header-menu {
     display: flex;
@@ -20,4 +23,23 @@
 }
 .header-menu-item {
     padding: 0rem 1rem;
+}
+.bars-icon {
+    font-size: 2.45rem;
+    cursor: pointer;
+}
+.header-dropdown-menu {
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+    border: 1px solid $lightgray;
+}
+.header-dropdown-menu-item {
+    cursor: pointer;
+}
+.header-dropdown-menu-item:not(:last-child) {
+    padding-bottom: 1rem;
+}
+.menu-text {
+    padding-left: 1rem;
 }

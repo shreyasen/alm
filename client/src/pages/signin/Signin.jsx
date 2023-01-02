@@ -1,15 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import axios from "axios";
-import Cookies from "js-cookie";
+import { useDispatch, useSelector } from "react-redux";
 import { ROUTE_NAMES } from "../../router/RouteNames";
+import { login } from "../../actions/AuthActions";
 
 const Signin = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
+  const isError = useSelector(state => state.auth.isError);
+  const errorStatus = useSelector(state => state.auth.errorStatus);
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
   });
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      navigate(ROUTE_NAMES.root);
+    }
+  },[isLoggedIn]);
 
   const handleInputChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
@@ -17,13 +27,7 @@ const Signin = () => {
 
   const handleSignin = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:5000/alm/auth", credentials)
-      .then((res) => {
-        Cookies.set("JWT-TOKEN", res.data.accessToken);
-        navigate(ROUTE_NAMES.root);
-      })
-      .catch((err) => console.log(err));
+    dispatch(login(credentials));
   };
 
   return (
@@ -34,6 +38,7 @@ const Signin = () => {
         <Link to="/signup">Create a new account</Link>
       </div>
       <form>
+      {isError && errorStatus === 403 && <p className="error-text">Username or password incorrect!</p>}
         <div>
           <input
             type={"email"}

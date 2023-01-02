@@ -1,0 +1,49 @@
+{
+  "course": {
+    "wpngCourseId": 14152,
+    "courseName": "Test course for Alexey R",
+    "courseState": "ACTIVE",
+    "courseKey": "8349df83-c9ab-4bd2-a9cc-daf2275680fa",
+    "product": {
+      "id": "22a446cf-3a2d-4add-8176-c3af5cffdf62",
+      "title": "STEADY_Blueprints_Content Player, isbn:EPROF11553, json:prod0000011111, bpid:1",
+      "authors": [
+        "Anna B"
+      ],
+      "isbn": "EPROF18213",
+      "type": "NG",
+      "canvasBlueprintCourseId": "1"
+    },
+    "url": "https://wiley2.test.instructure.com/courses/73"
+  },
+  "courseSections": [
+    {
+      "wpngSectionId": 20720,
+      "name": "12345",
+      "code": "A79280",
+      "instructors": [
+        {
+          "user_id": 107920,
+          "first_name": "ALEXEY",
+          "last_name": "RYZHAKOV",
+          "login_name": "aryzhakov@wiley.com"
+        },
+        {
+          "user_id": 108450,
+          "first_name": "USMAN",
+          "last_name": "FIRDAUSI",
+          "login_name": "afirdausi@wiley.com"
+        },
+        {
+          "user_id": 130333,
+          "first_name": "OSHAN",
+          "last_name": "FERNANDO",
+          "login_name": "oshan.test@mailinator.com"
+        }
+      ],
+      "courseSectionKey": "8db1e70c-d4b7-4c4f-bf98-260bf3f708e1",
+      "is_subscription_required": true,
+      "is_free_trial_enabled": true
+    }
+  ]
+}

@@ -26,6 +26,9 @@
     padding: 0.5rem 1rem;
     text-transform: uppercase;
     font-weight: bold;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .no-course-block {
     margin: auto;

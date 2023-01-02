@@ -1,0 +1,25 @@
+{
+  "course": {
+	"code": "A79281",
+    "courseName": "HTML5 For Beginner",
+    "courseState": "ACTIVE",
+    "courseKey": "ff3cef65-dfb9-4be2-86ff-66207309df47",
+	"instructors": [
+        {
+          "user_id": 107844,
+          "first_name": "ANNA",
+          "last_name": "BYKOVA",
+          "login_name": "abykova@wiley.com"
+        },
+        {
+          "user_id": 107911,
+          "first_name": "ORION INSTRUCTOR",
+          "last_name": "ORION INSTRUCTOR",
+          "login_name": "orion.instructor@wiley.qa"
+        }
+    ],
+    "isbn": "EPROF18214",
+	"is_subscription_required": false,
+    "is_free_trial_enabled": true
+  }
+}

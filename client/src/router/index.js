@@ -1,5 +1,5 @@
 import { ROUTE_NAMES } from "./RouteNames";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Dashboard from "../pages/dashboard/Dashboard";
 import Signin from "../pages/signin/Signin";
 import Signup from "../pages/signup/Signup";
@@ -12,7 +12,7 @@ import AccountSettings from "../pages/accountSettings/AccountSettings";
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <>
       <Common />
       <Routes>
         <Route path={ROUTE_NAMES.root} element={<Dashboard />} />
@@ -24,7 +24,7 @@ const Router = () => {
         <Route path={ROUTE_NAMES.accesscourse} element={<AccessCourse />} />
         <Route path={ROUTE_NAMES.accountsettings} element={<AccountSettings />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 };
 export default Router;
